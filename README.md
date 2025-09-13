@@ -1,15 +1,15 @@
-## 第三章中的数据集
+# 第三章中的数据集
 
 该数据集包含 2,500 个文本提示，涵盖 10 个应用领域的 100 项任务，总共包含 533 条原始指令（original instructions）和 543 条实际操作指令（actual instructions）。每项任务都对应一个教程。
 
-### 数据集结构
+## 数据集结构
 
 根目录包含以下内容：
 
 - `Tutorial/` - 一个目录，其中包含每个具体教程的子目录。
 - `textual_prompts.xlsx` - 一个 Excel 文件，包含 100 个不同任务的 2,500 个文本提示。
 
-#### Tutorial 目录
+### Tutorial 目录
 
 数据集中的每个目录都以其包含的教程名称命名。每个目录包含以下文件：
 
@@ -18,7 +18,7 @@
 
 请注意，有 **2 个教程无法使用无障碍服务（Accessibility Service）API 完成**，它们是 `在华为手机中开启手写功能的步骤` 和 `在手机QQ中进入自习室的步骤`。因此，这两个教程的 `tutorial.json` 文件中没有 `actual_instructions` 字段。
 
-##### tutorial.json 文件说明
+#### tutorial.json 文件说明
 
 `tutorial.json` 文件包含以下字段：
 
@@ -38,7 +38,7 @@
   - `description`: 指令的描述。
   - `imagePath`: 该指令的屏幕截图路径。该截图与 `tutorial.json` 文件位于同一目录下，并存储在名为 `[imagePath]` + `.jpg` 的文件中。
 
-### 额外信息
+## 备注信息
 
 数据是在具有以下规格的安卓手机上收集的：
 
